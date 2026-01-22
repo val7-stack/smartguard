@@ -1,64 +1,79 @@
-<header>
+# SMARTGUARD: ESP32-Based Epilepsy Monitoring and Alert System
 
-<!--
-  <<< Author notes: Course header >>>
-  Include a 1280×640 image, course title in sentence case, and a concise description in emphasis.
-  In your repository settings: enable template repository, add your 1280×640 social image, auto delete head branches.
-  Add your open source license, GitHub uses MIT license.
--->
-
-# Introduction to GitHub
-
-_Get started using GitHub in less than an hour._
-
-</header>
-
-<!--
-  <<< Author notes: Finish >>>
-  Review what we learned, ask for feedback, provide next steps.
--->
-
-## Finish
-
-_Congratulations, you've completed this course and joined the world of developers!_
-
-<img src=https://octodex.github.com/images/collabocats.jpg alt=celebrate width=300 align=right>
-
-Here's a recap of your accomplishments:
-
-- You learned about GitHub, repositories, branches, commits, and pull requests.
-- You created a branch, a commit, and a pull request.
-- You merged a pull request.
-- You made your first contribution! :tada:
-
-### What's next?
-
-If you'd like to make a profile README, use the quickstart instructions below or follow the instructions in the [Managing your profile README](https://docs.github.com/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme) article.
-
-1. Make a new public repository with a name that matches your GitHub username.
-2. Create a file named `README.md` in its root. The "root" means not inside any folder in your repository.
-3. Edit the contents of the `README.md` file.
-4. If you created a new branch for your file, open and merge a pull request on your branch.
-5. Lastly, we'd love to hear what you thought of this course [in our discussion board](https://github.com/orgs/skills/discussions/categories/introduction-to-github).
-
-Check out these resources to learn more or get involved:
-
-- Are you a student? Check out the [Student Developer Pack](https://education.github.com/pack).
-- [Take another GitHub Skills course](https://github.com/skills).
-- [Read the GitHub Getting Started docs](https://docs.github.com/en/get-started).
-- To find projects to contribute to, check out [GitHub Explore](https://github.com/explore).
-
-<footer>
-
-<!--
-  <<< Author notes: Footer >>>
-  Add a link to get support, GitHub status page, code of conduct, license link.
--->
+SMARTGUARD is an IoT-based healthcare monitoring system designed to assist in
+the real-time monitoring of epileptic patients. The system collects
+physiological and motion data, analyzes it locally, and transmits relevant
+information to the cloud for visualization and alerting.
 
 ---
 
-Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/introduction-to-github) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
+##  Problem Statement
+Epileptic seizures often occur unpredictably, placing patients at serious risk
+when immediate assistance is unavailable. Continuous monitoring systems can help
+detect abnormal physiological patterns and trigger timely alerts to caregivers
+or medical personnel.
 
-&copy; 2024 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+---
+
+##  System Overview
+The system is built around an ESP32 microcontroller that interfaces with multiple
+biomedical and motion sensors. Sensor data is processed locally and transmitted
+over Wi-Fi to a cloud dashboard for real-time monitoring.
+
+### Sensors Used
+- ECG Sensor (AD8232)
+- EMG Sensor
+- Accelerometer (ADXL335)
+- Temperature Sensor (DS18B20)
+
+---
+
+##  Data Processing & Intelligence
+- Raw sensor signals are acquired using the ESP32’s 12-bit ADC
+- A fuzzy logic–based decision system evaluates seizure likelihood
+- Thresholds are tuned based on sensor voltage ranges and physiological limits
+- Alerts are triggered when abnormal patterns are detected
+
+---
+
+##  IoT & Communication
+- Microcontroller: ESP32 DevKit
+- Connectivity: Wi-Fi
+- IoT Platform: ThingsBoard
+- Data Protocol: MQTT / HTTP
+- Local alerts via buzzer
+- Real-time cloud visualization via dashboard
+
+---
+
+##  Features
+- Continuous physiological monitoring
+- Motion-based seizure detection
+- Fuzzy logic–based risk assessment
+- Real-time IoT data visualization
+- Local alert generation
+- Scalable and cloud-integrated architecture
+
+---
+
+##  Results
+The system successfully acquires and visualizes physiological data in real time.
+Abnormal sensor patterns trigger alerts both locally and on the cloud dashboard,
+demonstrating the feasibility of low-cost IoT-based seizure monitoring.
+
+---
+
+##  Future Improvements
+- Machine learning–based seizure prediction
+- GPS-based patient location tracking
+- Mobile application integration
+- Power optimization using deep sleep modes
+
+---
+
+##  Author
+**Vallary Okumu**  
+Electrical & Electronics Engineering Graduate  
+IoT | Embedded Systems | Healthcare Technology
 
 </footer>
